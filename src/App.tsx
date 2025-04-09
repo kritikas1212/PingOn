@@ -102,17 +102,9 @@ function App() {
               </div>
               <div className="flex items-center gap-4">
                 <h1 className="text-2xl font-bold bg-gradient-to-r from-emerald-400 to-blue-500 text-transparent bg-clip-text">
-                  StatusWatch
+                  PingOn
                 </h1>
-                <a
-                  href="https://github.com/sioaeko/statuswatch"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="flex items-center gap-2 px-3 py-1 text-sm text-slate-400 hover:text-white transition-colors bg-slate-800/50 rounded-full border border-slate-700/50 hover:border-slate-600"
-                >
-                  <Github className="h-4 w-4" />
-                  <span>GitHub</span>
-                </a>
+                
               </div>
             </div>
             <div className="flex items-center gap-4">
