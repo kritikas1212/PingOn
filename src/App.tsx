@@ -1,11 +1,12 @@
 import React, { useState, useEffect, useCallback } from 'react';
-import { Plus, Clock, Github } from 'lucide-react';
+import { Plus, Clock } from 'lucide-react';
 import WebsiteCard from './components/WebsiteCard';
 import StatusBadge from './components/StatusBadge';
 import AddWebsiteModal from './components/AddWebsiteModal';
 import { Website } from './types';
 import EmptyState from './components/EmptyState';
 import { useMonitoring } from './hooks/useMonitoring';
+import logo from './assets/logo.png'; 
 
 function App() {
   const [websites, setWebsites] = useState<Website[]>(() => {
@@ -18,10 +19,10 @@ function App() {
     }
   });
 
-  const [currentTime, setCurrentTime] = useState(new Date().toLocaleTimeString([], { 
-    hour: '2-digit', 
-    minute: '2-digit', 
-    second: '2-digit' 
+  const [currentTime, setCurrentTime] = useState(new Date().toLocaleTimeString([], {
+    hour: '2-digit',
+    minute: '2-digit',
+    second: '2-digit'
   }));
   const [isModalOpen, setIsModalOpen] = useState(false);
 
@@ -29,9 +30,9 @@ function App() {
 
   useEffect(() => {
     const timer = setInterval(() => {
-      setCurrentTime(new Date().toLocaleTimeString([], { 
-        hour: '2-digit', 
-        minute: '2-digit', 
+      setCurrentTime(new Date().toLocaleTimeString([], {
+        hour: '2-digit',
+        minute: '2-digit',
         second: '2-digit'
       }));
     }, 1000);
@@ -79,33 +80,18 @@ function App() {
         <div className="container mx-auto px-4 py-6">
           <div className="flex items-center justify-between">
             <div className="flex items-center gap-3">
-              <div className="relative">
-                <div className="absolute inset-0 bg-emerald-500 blur-lg opacity-20"></div>
-                <div className="relative bg-gradient-to-br from-emerald-400 to-blue-500 rounded-xl p-2">
-                  <svg
-                    viewBox="0 0 24 24"
-                    width="32"
-                    height="32"
-                    stroke="currentColor"
-                    strokeWidth="2"
-                    fill="none"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    className="text-white"
-                  >
-                    <path d="M12 19V5" />
-                    <path d="M5 12l7-7 7 7" />
-                    <path d="M3 19h18" />
-                    <circle cx="12" cy="19" r="2" />
-                  </svg>
-                </div>
+              
+              <div className="relative w-12 h-12">
+                <img
+                  src={logo}
+                  alt="PingOn Logo"
+                  className="w-full h-full object-contain rounded-xl shadow-md"
+                />
               </div>
-              <div className="flex items-center gap-4">
-                <h1 className="text-2xl font-bold bg-gradient-to-r from-emerald-400 to-blue-500 text-transparent bg-clip-text">
-                  PingOn
-                </h1>
-                
-              </div>
+
+              <h1 className="text-2xl font-bold bg-gradient-to-r from-emerald-400 to-blue-500 text-transparent bg-clip-text">
+                PingOn
+              </h1>
             </div>
             <div className="flex items-center gap-4">
               <Clock className="h-5 w-5 text-slate-400" />
@@ -139,9 +125,9 @@ function App() {
 
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
               {websites.map(website => (
-                <WebsiteCard 
-                  key={website.id} 
-                  website={website} 
+                <WebsiteCard
+                  key={website.id}
+                  website={website}
                   onDelete={() => handleDeleteWebsite(website.id)}
                 />
               ))}
