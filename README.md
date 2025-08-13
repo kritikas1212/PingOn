@@ -4,9 +4,11 @@ A real-time website monitoring dashboard to track uptime, response time, and SSL
 Live Demo: pingon.netlify.app
 
 Overview
+
 PingOn helps you stay informed about your websites’ availability and performance. It continuously monitors endpoints, updates data in real time, and alerts you instantly when downtime, latency spikes, or SSL issues occur.
 
 Features
+
 Real-Time Monitoring – Track uptime, latency, and SSL status instantly.
 
 WebSocket Updates – Live data streaming without page reloads.
