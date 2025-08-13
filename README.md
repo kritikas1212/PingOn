@@ -1,7 +1,7 @@
 PingOn
 A real-time website monitoring dashboard to track uptime, response time, and SSL certificate health, with instant alerts and a clean, responsive UI.
 
-Live Demo: [https://pingon.netlify.app/](url)
+Live Demo: <https://pingon.netlify.app/>
 
 Overview
 
