@@ -39,17 +39,10 @@ cd pingon
 Install dependencies:
 
 npm install
-Create a .env file and configure your environment variables:
-
-env
-
-SLACK_WEBHOOK_URL=your_slack_webhook  
-EMAIL_SERVICE_API_KEY=your_email_service_key  
 
 Start the development server:
 npm run dev
 
-Usage
 Add website URLs to monitor.
 
 View real-time uptime and latency graphs.
